@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-[100vh]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Empty Webpack + Tailwindcss project</title>
 	</head>
-	<body>
-		<h1
-			class="text-3xl font-bold underline font-dancing bg-red-300 text-cyan-500"
-		>
-			Empty Webpack + Tailwindcss project
-		</h1>
+	<body class="flex flex-col justify-between h-full">
+		<header>
+			<div id="navBar" class="absolute">
+				<img src="./menu.png" alt="HamMenu" id="ham" class="cursor-pointer" />
+				<div id="actualMenu" class="hidden h-[500px] z-10 bg-white">
+					<div id="d1" class="w-24">This is d1</div>
+					<div id="d2" class="w-24">This is d2</div>
+				</div>
+			</div>
+			<h1
+				class="text-3xl font-bold underline font-dancing bg-red-300 text-cyan-500 pl-12"
+			>
+				Tailwindcss
+			</h1>
+		</header>
+
+		<main class="w-full h-full bg-zinc-300 m-auto">
+			<div
+				id="board"
+				class="relative h-[300px] max-w-[500px] bg-zinc-500 m-auto"
+			>
+				<div
+					id="left"
+					class="absolute left-4 w-12 h-12 top-32 cursor-pointer text-white"
+				></div>
+				<div
+					id="right"
+					class="absolute right-2 w-12 h-12 top-32 cursor-pointer text-white"
+				></div>
+				<div></div>
+			</div>
+
+			<div
+				id="leDots"
+				class="flex flex-row gap-8 w-[200px] justify-between mx-auto mt-4"
+			>
+				<div
+					id="dot1"
+					class="w-4 h-4 bg-white border-black border-2 rounded-full"
+				></div>
+				<div
+					id="dot2"
+					class="w-4 h-4 bg-white border-black border-2 rounded-full"
+				></div>
+				<div
+					id="dot3"
+					class="w-4 h-4 bg-white border-black border-2 rounded-full"
+				></div>
+			</div>
+		</main>
+
+		<footer class="bg-zinc-600 w-full text-center">This is the footer</footer>
 	</body>
 	<script src="bundle.js"></script>
 </html>
